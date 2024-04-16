@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caeser Cypher</title>
+    <link href="../static/style.css" rel=stylesheet>
+</head>
+<body>
+    <section class="centered">
+        <h1>Caeser Cypher</h1>
+        <form action="/user_message" method="POST">
+            <label for="text">Message to change: </label><br>
+            <textarea id="text" name="text" rows="4" cols="50" placeholder="Encrypted or unencrypted text here. Max. 50 characters."></textarea><br>
+
+            <label for="shift">Shift amount: </label>
+            <input type="number" id="shift" name="shift" min="1" max="25" placeholder="1-25" value="1"><br>
+
+            <input type="radio" id="encrypt" name="encryption" value="encrypt" checked>
+            <label for="encrypt">Encrypt</label><br>
+            <input type="radio" id="decrypt" name="encryption" value="decrypt">
+            <label for="decrypt">Decrypt</label><br>
+
+            <input type="submit" value="Alter Text" id="submit-button">
+        </form>
+        <div>
+            <p id="origin_text">{{origin_text}}</p>
+            <p id="cypher_text">{{cypher_text}}</p>
+        </div>
+    </section>
+
+</body>
+</html>
